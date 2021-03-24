@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Seu IMC</title>
+    <link rel="shortcut icon" href="imagens/Clod Head - favIcon.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        
+            <div class="coluna">
+                <div class="logo">
+                    <img src="imagens/Clod-Head---Logo.png" width="250">
+                </div>
+        
+                <div class="caixa">       
+                    <div class="divForm">
+                        <h4>
+                            Vamos descobrir se você está no peso ideal.
+                        </h4>
+        
+                        <form>
+        
+                            <div class="apresentacao">
+
+                                <p>Vamos começar nos apresentando. Eu sou o Alexsandro. E você,
+                                    como se chama?
+                                </p>
+                                <input class="texto" autocomplete="off" type="text" id="nome" placeholder="Me conte seu nome aqui">
+        
+                                <div class="sexo">
+                                    <p>Por favor, me diga se você é:</p>
+                                    <input type="radio" name="sexo" id="homem" value="homem">
+                                    <label for="homem">Um mano</label>
+                                    
+                                    <input type="radio" name="sexo" id="mulher" value="mulher">
+                                    <label for="mulher">Uma mina</label>
+                                </div>
+        
+                            </div>  
+                            
+                            <div class="dados">
+                                <div>
+                                    <label for="altura">Quanto você tem de altura (em metros)?</label> <br>
+                                    <input class="texto" type="number" name="altura" id="alturaInput" placeholder="Ex: 1,70"> <br>
+                                </div>    
+            
+                                <div>
+                                    <label for="peso">Qual seu peso mesmo (em kg)?</label> <br>
+                                    <input class="texto" type="number" name="peso" id="pesoInput" placeholder="Ex: 62"> <br>
+                                </div>
+        
+                                <button onclick="Calcular('IMC')" type="button">Calcular</button>
+                            </div>
+        
+        
+                        </form>  
+
+                        <div class="resultado" id="res">
+
+                            <h4 class="resultado">Resultado</h4>
+        
+                            <p class="p.resultado">Então <span class="span-res" id="nome-usuario"></span>,
+                                 o seu Índice de Massa Corporal está em <span class="span-res" id="imc-usuario"></span>. 
+                                 <span id="imc-definicao"></span> <span id="imc-consequencia"></span>.
+                            </p>
+
+                            <div id="pesoIdeal">
+                                <p>Se quiser descobrir seu peso ideal, consulte o botão abaixo.</p>
+                                <button onclick="Calcular('pesoIdeal')">Descubra</button>                                
+                            </div>
+
+                            <div id="res-pesoIdeal">
+                                <p>
+                                    Seu peso ideal está entre <span class="span-res" id="min"></span> e <span class="span-res" id="max"></span>.
+                                    O peso pode variar nesse intervalo de acordo com nível de sedentarismo, metabolismo etc.
+                                </p>
+                            </div>
+        
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <p>Developed by <a href="https://t.me/alexsandro_1">Alexsandro</a></p>
+        <div class="redes">
+
+            <a href="https://github.com/Alexsandro-01/"><img src="imagens/github.svg" width="30"></a>
+            <a href="https://www.instagram.com/1_alexsandro/"><img src="imagens/instagram.svg" width="30"></a>
+            <a href="https://www.linkedin.com/in/alexsandro-pinheiro-b547a8196/"><img src="imagens/linkedin.svg" width="30"></a>
+            <a href="https://www.facebook.com/Alexsandro.Fire"><img src="imagens/facebook.svg" width="30"></a>
+
+        </div>
+        
+    </footer>
+
+
+    <!--JavaScript-->
+    <script src="script.js"></script>
+</body>
+</html>
