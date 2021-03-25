@@ -156,8 +156,8 @@ a {
 
 @media (max-width: 592px) {
    .coluna {
-      width: 100%;
-   }
+        width: 100%;
+    }
 
     .logo img {
         width: 200px;
