@@ -73,7 +73,7 @@ button:hover {
 
 footer {
     width: 500px;
-    margin: auto;
+    margin: 20px auto 0 auto;
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
@@ -95,13 +95,16 @@ a {
 /*Estilo das caixas*/
 
 .container {
+    height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .coluna {
     width: 500px;
     display: flex;
+    margin: 20px auto;
     flex-direction: column;
 }
 
