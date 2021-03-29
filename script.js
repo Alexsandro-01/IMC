@@ -28,10 +28,10 @@ function Calcular(parametro) {
     if(usuario == '') {
         document.getElementById('nome').style.borderColor = 'red'
     }
-    else if(genero == ""){
+    else if(genero == ''){
+        console.log(genero)
         document.getElementById('labelHomen').style.color = 'red'
-        document.getElementById('labelMulher').style.color = 'red'
-        
+        document.getElementById('labelMulher').style.color = 'red'      
     }
     else if(altura == '') {
         document.getElementById('alturaInput').style.borderColor = 'red'
