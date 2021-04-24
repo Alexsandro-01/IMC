@@ -5,184 +5,223 @@
 }
 
 body, html {
-   height: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Trebuchet MS', Arial, sans-serif;
-    background-color: #252525;
+    font-family: 'Comfortaa', cursive;
+    background: url("imagens/email-pattern.png");
     color: whitesmoke;
 }
 
-/*Estilo conteudo*/
-p {
-    margin: 10px 0;
-}
 
-h4 {
-    color: #0084d1;
-    font-size: larger;
-}
-
-.apresentacao {
-    margin: 15px 0;
-}
-
-.sexo {
-    margin-bottom: 30px;
-}
-
-input.texto {
+/*Menu*/
+.menu-bar {
+    top: 0;
     width: 100%;
-    height: 30px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    border-style: none none solid;
-    border-color: #0084d1;
-    outline: none;
-    background-color: #252525;
-    color: whitesmoke;
-    font-size: 16px;
-}
-
-.dados {
     display: flex;
-    flex-direction: column;
-}
-
-button {
-    cursor: pointer;
-    width: 150px;
-    height: 50px;
-    display: block;
-    margin: 10px auto;
-    font-size: large;
-    align-self: center;
-    background-color: #0084d1;
-    color: #ffffff;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: rgba(245, 245, 245, 0);
-    color: #0084d1;
-    border: #0084d1 solid;
-}
-
-.span-res {
-    font-weight: bold;
-    color: #0084d1;
-}
-
-
-
-footer {
-    width: 500px;
-    margin: 20px auto 0 auto;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-}
-
-footer p {
-    display: inline;
-}
-
-a img {
-    margin: 5px;
-}
-
-a {
-    color: #0084d1;
-}
-
-
-/*Estilo das caixas*/
-
-.container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
-}
-
-.coluna {
-    width: 500px;
-    display: flex;
-    margin: 20px auto;
-    flex-direction: column;
+    background-color: #464646;
+    border-style: none none solid none;
+    border-color: #009EC2;
+    height: 70px;
+    box-shadow: 0px 4px 10px rgb(0, 0, 0);
 }
 
 .logo {
+    display: inline-block;
+    width: 130px;
+}
+
+.logo a {
+    display: inline-block;
+    height: 70px;
+    padding: 10px;
+}
+
+.logo img {
+    width: 130px;
+}
+
+/*Menu  toggle*/
+.botao-toggle {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: auto  15px;
+    border: black solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botao-toggle img {
+    margin-left: 2px;
+    width: 30px;
+}
+
+.toggle {
+    display: none;
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color:  #000000;
+    border-style: none none none solid;
+    border-color: #009EC2;
+    box-shadow: -2px 0px 10px rgb(174, 229, 255);
+}
+
+ul {
+    list-style: none;
+    padding: 20px 10px;
+}
+
+#close {
+    display: inline-block;
+    border: #009EC2 solid 2px;
+    border-radius: 5px;
+    color: #009EC2;
+    width: 20px;
+    height: 20px;
     text-align: center;
-    }
-    
+    cursor: pointer;
+}
+
+#li-close {
+    margin-top: 0;
+}
+
+li {
+    margin: 30px auto;
+}
+
+
+li a img {
+    width: 17%;
+}
+
+
+/*Container e apendices*/
+.container {
+    width: 90%;
+    margin: 30px auto;
+}
 
 .caixa {
-    width: 500px; 
-    align-self: center;  
-    display: flex;
-    justify-content: center;
+    background: #006075cc;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;    
 }
 
-.divForm {
-    display: inline-block;
+h4 {
+    font-size: 1.1rem;
+    margin: 15px auto;
+    color: #4AD8F7;
 }
 
-.redes {
-    margin-bottom: 10px;
-    background: #ffffff73;
-    width: 35%;
-    display: flex;
-    justify-content: space-around;
+#aviso {
+    font-size: 0.7rem;
 }
 
-#res {
-   display: none;
-   margin: 40px auto;
-   border: solid 1px #0084d1;
-   padding: 10px;
+form {
+    margin-top: 20px;
 }
 
-#res p {
-    line-height: 1.5em;
+p {
+    margin: 10px auto;
+    font-size: 0.85rem;
+    line-height: 1.4rem;
 }
 
-#res-pesoIdeal {
+#descobrir-peso-ideal {
+    font-weight: 800;
+}
+
+input[type="text"], input[type="number"] {
+    margin: 10px auto;
+    width: 100%;
+    height: 35px;
+    padding-left: 8px;
+    border-radius: 5px;
+    border: none;
+    color: #236675;
+}
+
+input:focus {
+    border: solid #4AD8F7;
+    box-shadow: #4AD8F7 0px 1px 15px ;
+    outline: none;
+}
+
+label {
+    font-size: 0.9rem;
+}
+
+.sexo {
+    margin: 10px auto;
+}
+.sexo p {
+    margin: 5px auto;
+    
+}
+
+.dados {
+    padding: 15px 0;
+}
+
+.dados div {
+    margin: 10px auto;
+}
+
+button {
+    display: block;
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    margin: 20px auto;
+    background-color: turquoise;
+}
+
+footer {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 50px;
+    background-color: #464646;
+    border-style: solid none none none;
+    border-color: #009EC2;
+    box-shadow: 0px -1px 15px black;
+    text-align: center;
+}
+
+a {
+    display: inline;
+    color: rgb(255, 255, 255);
+}
+
+.redes img {
+    width: 25px;
+}
+
+#resultado {
     display: none;
 }
 
-.block {
-    display: block;
+
+#res {
+    margin: 10px auto;
+    border: solid 2px #ffffff;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 
-
-
-@media (max-width: 592px) {
-   .coluna {
-        width: 100%;
-    }
-
-    .coluna {
-        width: 100%;
-    }
-
-    .logo img {
-        width: 200px;
-    }
-    
-    .caixa {
-        width: 80%;
-    }
-
-    footer {
-        width: 100%;
-    }
-
-    .redes {
-        width: 45%;
-    }
+strong {
+    font-weight: bold;
+    color: turquoise;
+}
+@media (min-width: 480px) {
+  
 
 }
