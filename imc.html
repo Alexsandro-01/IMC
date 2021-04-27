@@ -19,90 +19,104 @@
 <body>
     
     <div class="menu-bar" id="barra-menu">
-        <div class="logo">
-            <a href="index.html">
-                <img src="imagens/Cloud.png">
-            </a>
+        
+        <div class="caixa-menu">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagens/Cloud.png">
+                </a>
+            </div>
+
+            <div class="botao-toggle" onclick="display('open')">
+                <div class="barra-toggle"></div>
+                <div class="barra-toggle"></div>
+                <div class="barra-toggle"></div>
+            </div>
+
+            <div class="toggle" id="toggle">
+
+                <div class="nav">
+                    <ul>
+                        <li id="li-close"><strong id="close" onclick="display('close')">X</strong></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="imc.html">O que é IMC?</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li>
+                            <a href="https://www.facebook.com/Alexsandro.Fire"><img src="imagens/facebook.png"></a>
+                            <a href="https://github.com/Alexsandro-01/"><img src="imagens/github.png"></a>
+                            <a href="https://www.instagram.com/1_alexsandro/"><img src="imagens/instagram.png"></a>
+                            <a href="https://www.linkedin.com/in/alexsandro-pinheiro-b547a8196/"><img src="imagens/linkedin.png"></a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
 
-        <div class="botao-toggle" onclick="display('open')">
-            <img src="imagens/bars-solid.svg" alt="">
-        </div>
-
-        <div class="toggle" id="toggle">
-            <ul>
-                <li id="li-close"><strong id="close" onclick="display('close')">X</strong></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="imc.html">O que é IMC?</a></li>
-                <li><a href="sobre.html">Sobre este projeto</a></li>
-                <li>
-                    <a href="https://www.facebook.com/Alexsandro.Fire"><img src="imagens/facebook.png"></a>
-                    <a href="https://github.com/Alexsandro-01/"><img src="imagens/github.png"></a>
-                    <a href="https://www.instagram.com/1_alexsandro/"><img src="imagens/instagram.png"></a>
-                    <a href="https://www.linkedin.com/in/alexsandro-pinheiro-b547a8196/"><img src="imagens/linkedin.png"></a>
-
-                </li>
-            </ul>
-        </div>
     </div>
 
-    <div class="container">
+    <div class="flex">
 
-        <div class="coluna">
+        <div class="container">
 
-            <div class="caixa">
-                <div class="divForm">
-                    <h4>
-                        IMC: o que é isso, afinal?
-                    </h4>
+            <div class="coluna">
 
-                   <p>
-                    O índice de massa corporal (IMC) é uma medida internacional usada para calcular se uma pessoa está 
-                    no peso ideal. Desenvolvido pelo polímata Lambert Quételet no fim do século XIX, trata-se de um 
-                    método fácil e rápido para a avaliação do nível de gordura de cada pessoa, sendo, por isso, um 
-                    preditor internacional de obesidade adotado pela Organização Mundial da Saúde (OMS).
-                   </p>
+                <div class="caixa">
+                    <div class="divForm">
+                        <h4>
+                            IMC: o que é isso, afinal?
+                        </h4>
 
-                   <p>
-                    Estar dentro do peso certo é importante porque estar acima ou abaixo desse peso pode influenciar 
-                    bastante a saúde, aumentando o risco de doenças como desnutrição quando se está abaixo do peso, e 
-                    AVC ou infarto, quando se está acima do peso. Assim, é comum os médicos, enfermeiros e nutricionistas 
-                    avaliem o IMC da pessoa nas consultas de rotina para verificar a possibilidade de doenças que a pessoa 
-                    pode estar pre-disposta.
-                   </p>
+                    <p>
+                        O índice de massa corporal (IMC) é uma medida internacional usada para calcular se uma pessoa está 
+                        no peso ideal. Desenvolvido pelo polímata Lambert Quételet no fim do século XIX, trata-se de um 
+                        método fácil e rápido para a avaliação do nível de gordura de cada pessoa, sendo, por isso, um 
+                        preditor internacional de obesidade adotado pela Organização Mundial da Saúde (OMS).
+                    </p>
 
-                   <h4>Como calcular</h4>
+                    <p>
+                        Estar dentro do peso certo é importante porque estar acima ou abaixo desse peso pode influenciar 
+                        bastante a saúde, aumentando o risco de doenças como desnutrição quando se está abaixo do peso, e 
+                        AVC ou infarto, quando se está acima do peso. Assim, é comum os médicos, enfermeiros e nutricionistas 
+                        avaliem o IMC da pessoa nas consultas de rotina para verificar a possibilidade de doenças que a pessoa 
+                        pode estar pre-disposta.
+                    </p>
 
-                   <p>
-                    O IMC é determinado pela divisão da massa do indivíduo pelo quadrado de sua altura, em que a massa está em 
-                    quilogramas e a altura em metros.
-                   </p>
+                    <h4>Como calcular</h4>
 
-                   <p>
-                       IMC = Peso / (altura * altura)
-                   </p>
+                    <p>
+                        O IMC é determinado pela divisão da massa do indivíduo pelo quadrado de sua altura, em que a massa está em 
+                        quilogramas e a altura em metros.
+                    </p>
 
-                   <p>
-                       Assim para uma pessoa com 1.80 metros de altura e com 90 Kg de massa, teremos.
-                   </p>
+                    <p>
+                        IMC = Peso / (altura * altura)
+                    </p>
 
-                   <p>
-                       <b>
-                           IMC = 90 kg / (1.80 * 1.80)  = IMC 27.8
-                       </b>
-                   </p>
+                    <p>
+                        Assim para uma pessoa com 1.80 metros de altura e com 90 Kg de massa, teremos.
+                    </p>
 
+                    <p>
+                        <b>
+                            IMC = 90 kg / (1.80 * 1.80)  = IMC 27.8
+                        </b>
+                    </p>
+
+                    </div>
                 </div>
+
             </div>
 
         </div>
+        <footer>
+        
+            <p>Developed by <a href="https://t.me/alexsandro_1">&copy; Alexsandro</a></p>
 
-    </div>
-    <footer>
-    
-        <p>Developed by <a href="https://t.me/alexsandro_1">&copy; Alexsandro</a></p>
+        </footer>
 
-    </footer>
+    </div>    
 
 
 

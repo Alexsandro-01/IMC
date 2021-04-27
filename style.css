@@ -16,11 +16,12 @@ body, html {
 
 /*Menu*/
 .menu-bar {
+    position: sticky;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #464646;
+    background-color: #292929;
     border-style: none none solid none;
     border-color: #009EC2;
     height: 70px;
@@ -43,37 +44,66 @@ body, html {
 }
 
 /*Menu  toggle*/
+.caixa-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 .botao-toggle {
     display: inline-block;
-    width: 40px;
+    width: 50px;
     height: 40px;
     margin: auto  15px;
-    border: black solid;
+    border: #838383 solid;
     border-radius: 5px;
     cursor: pointer;
+    z-index: 1;
 }
 
-.botao-toggle img {
-    margin-left: 2px;
-    width: 30px;
+.botao-toggle:hover{
+    border: #009EC2 solid;
+    transition: 0.3s ease-in;
+}
+
+.botao-toggle:hover > div{
+    background-color: #009EC2;
+    transition: 0.3s ease-in;
+}
+
+
+
+.barra-toggle {
+    width: 35px;
+    height: 5px;
+    margin: 5px auto;
+    background-color: #c2c2c2;
 }
 
 .toggle {
-    display: none;
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    right: -100%;
+    height: 0px;
+    transition: 0.5s ease;
+}
+
+.nav {
     position: absolute;
-    width: 60%;
-    height: 100%;
     top: 0;
     right: 0;
-    background-color:  #000000;
+    width: 60%;
+    height: 100%;
+    background-color: #292929;
     border-style: none none none solid;
     border-color: #009EC2;
-    box-shadow: -2px 0px 10px rgb(174, 229, 255);
-}
+    box-shadow: -2px 10px 10px rgb(174, 229, 255);
+    z-index: 9;
+    }   
 
 ul {
     list-style: none;
-    padding: 20px 10px;
+    padding: 10px 10px;
 }
 
 #close {
@@ -81,8 +111,9 @@ ul {
     border: #009EC2 solid 2px;
     border-radius: 5px;
     color: #009EC2;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
     text-align: center;
     cursor: pointer;
 }
@@ -92,12 +123,12 @@ ul {
 }
 
 li {
-    margin: 30px auto;
+    margin: 50px 20px;
 }
 
-
 li a img {
-    width: 17%;
+    width: 13%;
+    margin: auto 5px;
 }
 
 
@@ -139,9 +170,9 @@ p {
 }
 
 input[type="text"], input[type="number"] {
-    margin: 10px auto;
+    margin: 20px auto;
     width: 100%;
-    height: 35px;
+    height: 40px;
     padding-left: 8px;
     border-radius: 5px;
     border: none;
@@ -177,18 +208,24 @@ label {
 button {
     display: block;
     width: 50%;
-    height: 35px;
+    height: 40px;
     border-radius: 5px;
     border: none;
     margin: 20px auto;
     background-color: turquoise;
 }
 
+button:hover {
+    cursor: pointer;
+    background-color: #00f7ff;
+    transition: 0.4s linear;
+}
+
 footer {
     width: 100%;
     padding: 10px 0;
     margin-top: 50px;
-    background-color: #464646;
+    background-color: #292929;
     border-style: solid none none none;
     border-color: #009EC2;
     box-shadow: 0px -1px 15px black;
@@ -221,7 +258,133 @@ strong {
     font-weight: bold;
     color: turquoise;
 }
-@media (min-width: 480px) {
-  
 
+@media  (min-width: 480px) {
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 2rem;
+        letter-spacing: 0.6px;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    #aviso {
+        font-size: 0.8rem;
+    }
+
+    .nav {
+        width: 40%;
+        margin-left: 60%;
+    }
+    
+    .flex {
+        height: 93%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+ 
+    .flex {
+        height: 93%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .coluna {
+        max-width: 750px;
+        margin: auto;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 2rem;
+        letter-spacing: 0.6px;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    #aviso {
+        font-size: 0.8rem;
+    }
+
+    .botao-toggle {
+        display: none;
+    }
+    
+    .toggle {
+        position: static;
+    }
+
+    .caixa-menu {
+        display: flex;
+        justify-content: space-between;
+        max-width: 769px;
+        width: 769px;
+        margin: auto;
+    }
+    
+    .nav {
+        position: static;
+        width: 550px;
+        height: 67px;
+        margin-left: auto;
+        background-color: #292929;
+        border:none;
+        box-shadow: none;
+        }   
+    
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 550px;
+        height: 100%;
+        list-style: none;
+        padding: 10px 0;
+    }
+    
+  
+    #li-close {
+        display: none;
+    }
+    
+    li {
+        display: block;
+        margin: 0px 10px;
+    }
+
+    li a {
+        text-decoration: none;
+    }
+
+    li a:hover {
+        color: #009EC2;
+        transition: 0.4s ease;
+    }
+    
+    li a img {
+        width: 20px;
+        margin: auto 5px;
+    }
+    
 }
