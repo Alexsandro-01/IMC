@@ -26,35 +26,29 @@ function Calcular(parametro) {
     let labelMulher = document.getElementById('labelMulher')
 
     if(nome.value == '') {
+
         nome.style.border = 'solid red'
     }
-    else {
-        //volta o anterior ao normal
-        nome.style.border = 'none'
-    }
-    if(genero == ''){
+    else if(genero == ''){
 
         labelHomen.style.color = 'red'
         labelMulher.style.color = 'red'
-    }
-    else {
-        //volta ao normal
-        labelHomen.style.color = 'white'
-        labelMulher.style.color = 'white'
-    }
-    if(altura.value == '' || altura.value % 1 == 0) {
+    }   
+    else  if(altura.value == '' || altura.value % 1 == 0) {
 
         altura.value = ''
         altura.style.border = 'solid red'
     }
-    else {
-        //normal anterior
-        altura.style.border = 'none'
-    }
-    if(peso.value == '') {
+    else if(peso.value == '') {
+
         peso.style.border = 'solid red'
     }
     else {
+        //retorna o estilo dos eleemntos ao normal
+        nome.style.border = 'none'
+        labelHomen.style.color = 'white'
+        labelMulher.style.color = 'white'
+        altura.style.border = 'none'
         peso.style.border = 'none'
 
         if (parametro === 'IMC') {
@@ -168,12 +162,15 @@ function clacularIMC(peso, altura, nome) {
     })
 }
 
-function display(value) {
-    if(value == 'open') {
-        document.getElementById('toggle').style.display = 'block'
-        document.getElementById('barra-menu').style.position = 'static'
+function display() {
+    let toggle = document.querySelector(".toggle")
+    let altura = window.innerHeight
+
+    if(toggle.style.right == "0%") {
+        toggle.style.right = "-100%"
     }
     else {
-        document.getElementById('toggle').style.display = 'none'
+        toggle.style.right = "0%"
+        toggle.style.height = altura -70 + "px"
     }
 }

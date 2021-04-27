@@ -19,90 +19,105 @@
 <body>
     
     <div class="menu-bar" id="barra-menu">
-        <div class="logo">
-            <a href="index.html">
-                <img src="imagens/Cloud.png">
-            </a>
+        
+        <div class="caixa-menu">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagens/Cloud.png">
+                </a>
+            </div>
+
+            <div class="botao-toggle" onclick="display('open')">
+                <div class="barra-toggle"></div>
+                <div class="barra-toggle"></div>
+                <div class="barra-toggle"></div>
+            </div>
+
+            <div class="toggle" id="toggle">
+
+                <div class="nav">
+                    <ul>
+                        <li id="li-close"><strong id="close" onclick="display('close')">X</strong></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="imc.html">O que é IMC?</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li>
+                            <a href="https://www.facebook.com/Alexsandro.Fire"><img src="imagens/facebook.png"></a>
+                            <a href="https://github.com/Alexsandro-01/"><img src="imagens/github.png"></a>
+                            <a href="https://www.instagram.com/1_alexsandro/"><img src="imagens/instagram.png"></a>
+                            <a href="https://www.linkedin.com/in/alexsandro-pinheiro-b547a8196/"><img src="imagens/linkedin.png"></a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
 
-        <div class="botao-toggle" onclick="display('open')">
-            <img src="imagens/bars-solid.svg" alt="">
-        </div>
-
-        <div class="toggle" id="toggle">
-            <ul>
-                <li id="li-close"><strong id="close" onclick="display('close')">X</strong></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="imc.html">O que é IMC?</a></li>
-                <li><a href="sobre.html">Sobre este projeto</a></li>
-                <li>
-                    <a href="https://www.facebook.com/Alexsandro.Fire"><img src="imagens/facebook.png"></a>
-                    <a href="https://github.com/Alexsandro-01/"><img src="imagens/github.png"></a>
-                    <a href="https://www.instagram.com/1_alexsandro/"><img src="imagens/instagram.png"></a>
-                    <a href="https://www.linkedin.com/in/alexsandro-pinheiro-b547a8196/"><img src="imagens/linkedin.png"></a>
-
-                </li>
-            </ul>
-        </div>
     </div>
 
-    <div class="container">
+    <div class="flex">
 
-        <div class="coluna">
+ 
+        <div class="container">
+            
+            <div class="coluna">
+                
+                <div class="caixa">
+                    <div class="divForm">
+                        <h4>
+                            Do que se trata esse projeto?
+                        </h4>
 
-            <div class="caixa">
-                <div class="divForm">
-                    <h4>
-                        Do que se trata esse projeto?
-                    </h4>
+                    <p>
+                        Eu tenho estudado programação há algum tempo, por isso decidi fazer esse projeto para testar
+                        os meus conhecimentos. Essa já é a versão 2.0 desse site. Eu decide atualisá-lo, pois já aprendi
+                        muito desde a versão 1.0, e logo mais devo fazer uma nova versão antes de partir para projetos mais
+                        sofisticados. Estou bem animado para fazer projetos maiores.
+                    </p>
 
-                   <p>
-                    Eu tenho estudado programação há algum tempo, por isso decidi fazer esse projeto para testar
-                    os meus conhecimentos. Essa já é a versão 2.0 desse site. Eu decide atualisá-lo, pois já aprendi
-                    muito desde a versão 1.0, e logo mais devo fazer uma nova versão antes de partir para projetos mais
-                    sofisticados. Estou bem animado para fazer projetos maiores.
-                   </p>
+                    <p>
+                        Mas claro, nem tudo, ou melhor, quase nada são flores quando se trata de programação,
+                        um programador experiente disse que <i>"Programar é uma constante frustração"</i>. E é bem isso 
+                        mesmo, a quantidade de erros possíveis é gigante, é preciso ter a mente e uma a lógica muito 
+                        organizada. No começo eu me sentia o ser mais burro do planeta, levava muito tempo para 
+                        resolver problemas simples e até desisti uma ou duas vezes.
+                    </p>
 
-                   <p>
-                    Mas claro, nem tudo, ou melhor, quase nada são flores quando se trata de programação,
-                    um programador experiente disse que <i>"Programar é uma constante frustração"</i>. E é bem isso 
-                    mesmo, a quantidade de erros possíveis é gigante, é preciso ter a mente e uma a lógica muito 
-                    organizada. No começo eu me sentia o ser mais burro do planeta, levava muito tempo para 
-                    resolver problemas simples e até desisti uma ou duas vezes.
-                   </p>
+                    <p>
+                        Uma frase no twitter me ganhou na hora que a vi, era assim <b>"Quem desiste não deixa legado"</b>.
+                        Apartir daí comecei a estudar dia sim e no outro também.
+                    </p>
 
-                   <p>
-                    Uma frase no twitter me ganhou na hora que a vi, era assim <b>"Quem desiste não deixa legado"</b>.
-                    Apartir daí comecei a estudar dia sim e no outro também.
-                   </p>
+                    <p>
+                        Alguns meses depois já estou conseguindo ler os códigos quase como se lê um livro. E Ando 
+                        visitando scripts antigos e corrigindo algumas atrocidades que cometia na época por falta de
+                        conhecimento. Assim como vou fazer no futuro de novo com os códigos que escrevo hoje em dia, 
+                        já que agora que estou arranhando a superfície do conhecimento que ainda tenho para aprender.
+                    </p>
 
-                   <p>
-                       Alguns meses depois já estou conseguindo ler os códigos quase como se lê um livro. E Ando 
-                       visitando scripts antigos e corrigindo algumas atrocidades que cometia na época por falta de
-                       conhecimento. Assim como vou fazer no futuro de novo com os códigos que escrevo hoje em dia, 
-                       já que agora que estou arranhando a superfície do conhecimento que ainda tenho para aprender.
-                   </p>
+                    <p>
+                            Na minha mente tem uma imagem muito clara de onde quero chegar como desenvolvedor, desenvolvimento
+                            Web foi apenas o primeiro caminho que decidi trilhar como programador. Eu queria poder pegar essa 
+                            determinação e colocar em um pote.
+                    </p>
 
-                   <p>
-                        Na minha mente tem uma imagem muito clara de onde quero chegar como desenvolvedor, desenvolvimento
-                        Web foi apenas o primeiro caminho que decidi trilhar como programador. Eu queria poder pegar essa 
-                        determinação e colocar em um pote.
-                   </p>
+                    <p> - <i>Quem desiste não deixa legado.</i></p>
 
-                   <p> - <i>Quem desiste não deixa legado.</i></p>
-
+                    </div>
                 </div>
+
             </div>
 
         </div>
 
-    </div>
-    <footer>
+        <footer>
+        
+            <p>Developed by <a href="https://t.me/alexsandro_1"> &copy; Alexsandro</a></p>
+
+        </footer>
     
-        <p>Developed by <a href="https://t.me/alexsandro_1"> &copy; Alexsandro</a></p>
-
-    </footer>
-
+    </div>   
 
 
 

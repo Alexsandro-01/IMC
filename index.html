@@ -19,125 +19,138 @@
 <body id="corpo">
     
     <div class="menu-bar" id="barra-menu">
-        <div class="logo">
-            <a href="index.html">
-                <img src="imagens/Cloud.png">
-            </a>
+
+        <div class="caixa-menu">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagens/Cloud.png">
+                </a>
+            </div>
+
+            <div class="botao-toggle" onclick="display()">
+                <div class="barra-toggle"></div>
+                <div class="barra-toggle"></div>
+                <div class="barra-toggle"></div>
+            </div>
+
+            <div class="toggle" id="toggle">
+
+                <div class="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="imc.html">O que é IMC?</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li>
+                            <a href="https://www.facebook.com/Alexsandro.Fire"><img src="imagens/facebook.png"></a>
+                            <a href="https://github.com/Alexsandro-01/"><img src="imagens/github.png"></a>
+                            <a href="https://www.instagram.com/1_alexsandro/"><img src="imagens/instagram.png"></a>
+                            <a href="https://www.linkedin.com/in/alexsandro-pinheiro-b547a8196/"><img src="imagens/linkedin.png"></a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
 
-        <div class="botao-toggle" onclick="display('open')">
-            <img src="imagens/bars-solid.svg" alt="">
-        </div>
-
-        <div class="toggle" id="toggle">
-            <ul>
-                <li id="li-close"><strong id="close" onclick="display('close')">X</strong></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="imc.html">O que é IMC?</a></li>
-                <li><a href="sobre.html">Sobre este projeto</a></li>
-                <li>
-                    <a href="https://www.facebook.com/Alexsandro.Fire"><img src="imagens/facebook.png"></a>
-                    <a href="https://github.com/Alexsandro-01/"><img src="imagens/github.png"></a>
-                    <a href="https://www.instagram.com/1_alexsandro/"><img src="imagens/instagram.png"></a>
-                    <a href="https://www.linkedin.com/in/alexsandro-pinheiro-b547a8196/"><img src="imagens/linkedin.png"></a>
-
-                </li>
-            </ul>
-        </div>
     </div>
 
-    <div class="container">
+    <div class="flex">
+        
+        <div class="container">
 
-        <div class="coluna">
+            <div class="coluna">
 
-            <div class="caixa">
-                <div class="divForm">
-                    <h4>
-                        Vamos descobrir se você está no peso ideal.
-                    </h4>
+                <div class="caixa">
+                    <div class="divForm">
+                        <h4>
+                            Vamos descobrir se você está no peso ideal.
+                        </h4>
 
-                    <form>
+                        <form>
 
-                        <div class="apresentacao">
+                            <div class="apresentacao">
 
-                            <p>
-                                <i id="aviso">
-                                    *Este teste não é preciso para pessoas menores de 18 anos
-                                    ou maiores de 60 anos. É ultilizada uma tabela diferente para 
-                                    o cálculo de IMC desses dois grupos.
-                                </i>
-                            </p>
+                                <p>
+                                    <i id="aviso">
+                                        *Este teste não é preciso para pessoas menores de 18 anos
+                                        ou maiores de 60 anos. É ultilizada uma tabela diferente para 
+                                        o cálculo de IMC desses dois grupos.
+                                    </i>
+                                </p>
 
-                            <p>
-                                Vamos começar nos apresentando. Eu sou o Alexsandro. E você,
-                                como se chama?
-                            </p>
-                            <input class="texto" autocomplete="off" type="text" id="nome"
-                                placeholder="Me conte seu nome aqui">
+                                <p>
+                                    Vamos começar nos apresentando. Eu sou o Alexsandro. E você,
+                                    como se chama?
+                                </p>
+                                <input class="texto" autocomplete="off" type="text" id="nome"
+                                    placeholder="Me conte seu nome aqui">
 
-                            <div class="sexo">
-                                <p>Por favor, me diga se você é:</p>
-                                <input type="radio" name="sexo" id="homem" value="homem">
-                                <label for="homem" id="labelHomen">Homen</label>
+                                <div class="sexo">
+                                    <p>Por favor, me diga se você é:</p>
+                                    <input type="radio" name="sexo" id="homem" value="homem">
+                                    <label for="homem" id="labelHomen">Homen</label>
 
-                                <input type="radio" name="sexo" id="mulher" value="mulher">
-                                <label for="mulher" id="labelMulher">Mulher</label>
+                                    <input type="radio" name="sexo" id="mulher" value="mulher">
+                                    <label for="mulher" id="labelMulher">Mulher</label>
+                                </div>
+
                             </div>
 
-                        </div>
+                            <div class="dados">
+                                <div>
+                                    <label for="altura">Quanto você tem de altura (em metros)?</label> <br>
+                                    <input class="texto" type="number" name="altura" id="alturaInput" step="0.1"
+                                        placeholder="Ex: 1,70"> <br>
+                                </div>
 
-                        <div class="dados">
-                            <div>
-                                <label for="altura">Quanto você tem de altura (em metros)?</label> <br>
-                                <input class="texto" type="number" name="altura" id="alturaInput" step="0.1"
-                                    placeholder="Ex: 1,70"> <br>
+                                <div>
+                                    <label for="peso">Qual seu peso mesmo (em kg)?</label> <br>
+                                    <input class="texto" type="number" name="peso" id="pesoInput" placeholder="Ex: 62"> <br>
+                                </div>
+
+                                <button onclick="Calcular('IMC')" type="button">Calcular</button>
                             </div>
 
-                            <div>
-                                <label for="peso">Qual seu peso mesmo (em kg)?</label> <br>
-                                <input class="texto" type="number" name="peso" id="pesoInput" placeholder="Ex: 62"> <br>
-                            </div>
-
-                            <button onclick="Calcular('IMC')" type="button">Calcular</button>
-                        </div>
-
-                    </form>
-                   
-                </div>
-            </div>
-            
-            <div class="caixa" id="resultado">
-                <div>
-    
-                    <h4 class="resultado">Resultado</h4>
-    
-                    <p id="p-resultado">
-                    </p>
-
-                    <p id="descobrir-peso-ideal">
-
-                    </p>
-    
-                    <div id="pesoIdeal">
-                        <button onclick="Calcular('pesoIdeal')">Descubra</button>
+                        </form>
+                    
                     </div>
-    
-                    <div id="res-pesoIdeal">
-                        <p id="p-pesoIdeal">
+                </div>
+                
+                <div class="caixa" id="resultado">
+                    <div>
+        
+                        <h4 class="resultado">Resultado</h4>
+        
+                        <p id="p-resultado">
                         </p>
+
+                        <p id="descobrir-peso-ideal">
+
+                        </p>
+        
+                        <div id="pesoIdeal">
+                            <button onclick="Calcular('pesoIdeal')">Descubra</button>
+                        </div>
+        
+                        <div id="res-pesoIdeal">
+                            <p id="p-pesoIdeal">
+                            </p>
+                        </div>
+        
                     </div>
-    
                 </div>
+
             </div>
 
         </div>
+        <footer>
+        
+            <p>Developed by <a href="https://t.me/alexsandro_1"> &copy; Alexsandro</a></p>
 
+        </footer>
+        
     </div>
-    <footer>
-    
-        <p>Developed by <a href="https://t.me/alexsandro_1"> &copy; Alexsandro</a></p>
-
-    </footer>
 
 
 
