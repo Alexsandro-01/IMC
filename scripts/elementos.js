@@ -1,6 +1,10 @@
 function elementos(parametro, atrib, ) {
 
 	if(atrib == 'imc') {
+
+		//desabilita o botão para não ser consultado novamente
+		let botao = document.getElementById('botao1')
+		botao.setAttribute('disabled', 'disabled')
 		
 		let resultado = document.createElement('div')
 		resultado.className = 'caixa'
@@ -32,6 +36,7 @@ function elementos(parametro, atrib, ) {
 		
 		let button = document.createElement('button')
 		button.setAttribute("onclick", "Calcular('pesoIdeal')")
+		button.id = 'botao2'
 		button.innerHTML = 'Descubra'
 
 		div.appendChild(h4)
@@ -53,6 +58,9 @@ function elementos(parametro, atrib, ) {
 	}
 
 	else if( atrib == 'pesoIdeal') {
+
+		let botao = document.getElementById('botao2')
+		botao.setAttribute('disabled', 'disabled')
 
 		let res_pesoIdeal = document.createElement('div')
 		res_pesoIdeal.id = 'res_pesoIdeal'
