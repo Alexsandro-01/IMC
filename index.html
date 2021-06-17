@@ -11,7 +11,8 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -41,10 +42,10 @@
                         <li><a href="imc.html">O que é IMC?</a></li>
                         <li><a href="sobre.html">Sobre</a></li>
                         <li>
-                            <a href="https://www.facebook.com/Alexsandro.Fire"><img src="imagens/facebook.png"></a>
-                            <a href="https://github.com/Alexsandro-01/"><img src="imagens/github.png"></a>
-                            <a href="https://www.instagram.com/1_alexsandro/"><img src="imagens/instagram.png"></a>
-                            <a href="https://www.linkedin.com/in/alexsandro-pinheiro-b547a8196/"><img src="imagens/linkedin.png"></a>
+                            <a href="https://www.facebook.com/Alexsandro.Fire"><i class="fab fa-facebook-square fa-lg"></i></a>
+                            <a href="https://github.com/Alexsandro-01/"><i class="fab fa-git-square fa-lg"></i></a>
+                            <a href="https://www.instagram.com/1_alexsandro/"><i class="fab fa-instagram fa-lg"></i></a>
+                            <a href="https://www.linkedin.com/in/alexsandro-pinheiro-b547a8196/"><i class="fab fa-linkedin fa-lg"></i></a>
 
                         </li>
                     </ul>
@@ -59,7 +60,7 @@
         
         <div class="container">
 
-            <div class="coluna">
+            <div class="coluna" id="coluna">
 
                 <div class="caixa">
                     <div class="divForm">
@@ -117,29 +118,7 @@
                     </div>
                 </div>
                 
-                <div class="caixa" id="resultado">
-                    <div>
-        
-                        <h4 class="resultado">Resultado</h4>
-        
-                        <p id="p-resultado">
-                        </p>
-
-                        <p id="descobrir-peso-ideal">
-
-                        </p>
-        
-                        <div id="pesoIdeal">
-                            <button onclick="Calcular('pesoIdeal')">Descubra</button>
-                        </div>
-        
-                        <div id="res-pesoIdeal">
-                            <p id="p-pesoIdeal">
-                            </p>
-                        </div>
-        
-                    </div>
-                </div>
+                
 
             </div>
 
@@ -155,8 +134,10 @@
 
 
 
-    <!--JavaScript-->
-    <script src="script.js"></script>
+   <!--JavaScript-->
+   <script src="scripts/calcular.js"></script>
+   <script src="scripts/calcularIMC.js"></script>
+   <script src="scripts/elementos.js"></script>
 </body>
 
 </html>
