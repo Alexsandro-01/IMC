@@ -139,8 +139,8 @@ li a img {
 }
 
 .caixa {
-    background: #006075cc;
-    padding: 15px;
+    background-color: #444;
+    padding: 50px;
     margin-top: 20px;
     border-radius: 5px;    
 }
@@ -153,6 +153,11 @@ h4 {
 
 #aviso {
     font-size: 0.7rem;
+    display: block;
+    width: 90%;
+    margin-left: 10%;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 form {
@@ -212,6 +217,8 @@ button {
     border-radius: 5px;
     border: none;
     margin: 20px auto;
+    color: #222;
+    font-size: 1rem;
     background-color: turquoise;
 }
 
@@ -240,11 +247,6 @@ a {
 .redes img {
     width: 25px;
 }
-
-#resultado {
-    display: none;
-}
-
 
 #res {
     margin: 10px auto;
@@ -345,7 +347,7 @@ strong {
     
     .nav {
         position: static;
-        width: 550px;
+        width: 400px;
         height: 67px;
         margin-left: auto;
         background-color: #292929;
@@ -357,7 +359,7 @@ strong {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 550px;
+        width: 400px;
         height: 100%;
         list-style: none;
         padding: 10px 0;
