@@ -79,7 +79,14 @@ function elementos(parametro, atrib, ) {
 		//console.log(div)
 		div.insertBefore(res_pesoIdeal, div[5])
 
-
 	}
-	
+	scrollToResult();
+}
+
+function scrollToResult() {
+	const result = document.getElementById('resultado').offsetTop;
+	window.scroll({
+		top: result,
+		behavior: 'smooth',
+	});
 }

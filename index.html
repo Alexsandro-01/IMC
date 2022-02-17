@@ -2,142 +2,126 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Seu IMC</title>
-    <link rel="shortcut icon" href="imagens/Head-cloud-favIcon.png" type="image/x-icon">
+	<title>Seu IMC</title>
+	<link rel="shortcut icon" href="imagens/Head-cloud-favIcon.png" type="image/x-icon">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+		integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+
+	<!--JavaScript-->
+	<script defer src="scripts/calcular.js"></script>
+	<script defer src="scripts/calcularIMC.js"></script>
+	<script defer src="scripts/elementos.js"></script>
 
 </head>
 
 <body id="corpo">
-    
-    <div class="menu-bar" id="barra-menu">
+	<div class="menu-bar" id="barra-menu">
+		<div class="caixa-menu">
+			<div class="logo">
+				<a href="index.html">
+					<img src="imagens/Cloud.png">
+				</a>
+			</div>
+			<div class="botao-toggle" onclick="display()">
+				<div class="barra-toggle"></div>
+				<div class="barra-toggle"></div>
+				<div class="barra-toggle"></div>
+			</div>
+			<div class="toggle" id="toggle">
+				<div class="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="imc.html">O que é IMC?</a></li>
+						<li><a href="sobre.html">Sobre</a></li>
+						<li>
+							<a href="https://www.facebook.com/Alexsandro.Fire"><i
+									class="fab fa-facebook-square fa-lg"></i></a>
+							<a href="https://github.com/Alexsandro-01/"><i class="fab fa-git-square fa-lg"></i></a>
+							<a href="https://www.instagram.com/1_alexsandro/"><i class="fab fa-instagram fa-lg"></i></a>
+							<a href="https://www.linkedin.com/in/alexsandro-pinheiro-b547a8196/"><i
+									class="fab fa-linkedin fa-lg"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 
-        <div class="caixa-menu">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="imagens/Cloud.png">
-                </a>
-            </div>
+	<div class="flex">
 
-            <div class="botao-toggle" onclick="display()">
-                <div class="barra-toggle"></div>
-                <div class="barra-toggle"></div>
-                <div class="barra-toggle"></div>
-            </div>
+		<div class="container">
 
-            <div class="toggle" id="toggle">
+			<div class="coluna" id="coluna">
 
-                <div class="nav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="imc.html">O que é IMC?</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li>
-                            <a href="https://www.facebook.com/Alexsandro.Fire"><i class="fab fa-facebook-square fa-lg"></i></a>
-                            <a href="https://github.com/Alexsandro-01/"><i class="fab fa-git-square fa-lg"></i></a>
-                            <a href="https://www.instagram.com/1_alexsandro/"><i class="fab fa-instagram fa-lg"></i></a>
-                            <a href="https://www.linkedin.com/in/alexsandro-pinheiro-b547a8196/"><i class="fab fa-linkedin fa-lg"></i></a>
+				<div class="caixa">
+					<div class="divForm">
+						<h4>
+							Vamos descobrir se você está no peso ideal.
+						</h4>
 
-                        </li>
-                    </ul>
-                </div>
+						<form>
 
-            </div>
-        </div>
+							<div class="apresentacao">
 
-    </div>
+								<p>
+									<i id="aviso">
+										*Este teste não é preciso para pessoas menores de 18 anos
+										ou maiores de 60 anos. É ultilizada uma tabela diferente para
+										o cálculo de IMC desses dois grupos.
+									</i>
+								</p>
 
-    <div class="flex">
-        
-        <div class="container">
+								<p>
+									Vamos começar nos apresentando. Eu sou o Alexsandro. E você,
+									como se chama?
+								</p>
+								<input class="texto" autocomplete="off" type="text" id="nome"
+									placeholder="Me conte seu nome aqui">
 
-            <div class="coluna" id="coluna">
+								<div class="sexo">
+									<p>Por favor, me diga se você é:</p>
+									<input type="radio" name="sexo" id="homem" value="homem">
+									<label for="homem" id="labelHomen">Homen</label>
 
-                <div class="caixa">
-                    <div class="divForm">
-                        <h4>
-                            Vamos descobrir se você está no peso ideal.
-                        </h4>
+									<input type="radio" name="sexo" id="mulher" value="mulher">
+									<label for="mulher" id="labelMulher">Mulher</label>
+								</div>
 
-                        <form>
+							</div>
 
-                            <div class="apresentacao">
+							<div class="dados">
+								<div>
+									<label for="altura">Quanto você tem de altura (em metros)?</label> <br>
+									<input class="texto" type="number" name="altura" id="alturaInput" step="0.1"
+										placeholder="Ex: 1,70"> <br>
+								</div>
 
-                                <p>
-                                    <i id="aviso">
-                                        *Este teste não é preciso para pessoas menores de 18 anos
-                                        ou maiores de 60 anos. É ultilizada uma tabela diferente para 
-                                        o cálculo de IMC desses dois grupos.
-                                    </i>
-                                </p>
+								<div>
+									<label for="peso">Qual seu peso mesmo (em kg)?</label> <br>
+									<input class="texto" type="number" name="peso" id="pesoInput" placeholder="Ex: 62">
+									<br>
+								</div>
 
-                                <p>
-                                    Vamos começar nos apresentando. Eu sou o Alexsandro. E você,
-                                    como se chama?
-                                </p>
-                                <input class="texto" autocomplete="off" type="text" id="nome"
-                                    placeholder="Me conte seu nome aqui">
-
-                                <div class="sexo">
-                                    <p>Por favor, me diga se você é:</p>
-                                    <input type="radio" name="sexo" id="homem" value="homem">
-                                    <label for="homem" id="labelHomen">Homen</label>
-
-                                    <input type="radio" name="sexo" id="mulher" value="mulher">
-                                    <label for="mulher" id="labelMulher">Mulher</label>
-                                </div>
-
-                            </div>
-
-                            <div class="dados">
-                                <div>
-                                    <label for="altura">Quanto você tem de altura (em metros)?</label> <br>
-                                    <input class="texto" type="number" name="altura" id="alturaInput" step="0.1"
-                                        placeholder="Ex: 1,70"> <br>
-                                </div>
-
-                                <div>
-                                    <label for="peso">Qual seu peso mesmo (em kg)?</label> <br>
-                                    <input class="texto" type="number" name="peso" id="pesoInput" placeholder="Ex: 62"> <br>
-                                </div>
-
-                                <button onclick="Calcular('IMC')" type="button" id="botao1">Calcular</button>
-                            </div>
-
-                        </form>
-                    
-                    </div>
-                </div>
-                
-                
-
-            </div>
-
-        </div>
-        <footer>
-        
-            <p>Developed by <a href="https://t.me/alexsandro_1"> &copy; Alexsandro</a></p>
-
-        </footer>
-        
-    </div>
-
-
-
-
-   <!--JavaScript-->
-   <script src="scripts/calcular.js"></script>
-   <script src="scripts/calcularIMC.js"></script>
-   <script src="scripts/elementos.js"></script>
+								<button onclick="Calcular('IMC')" type="button" id="botao1">Calcular</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<p>Developed by <a href="https://t.me/alexsandro_1"> &copy; Alexsandro</a></p>
+		</footer>
+	</div>
 </body>
 
 </html>
